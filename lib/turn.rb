@@ -29,9 +29,9 @@ end
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    unless index <10
-      puts "Please enter 1-9"
-    end
+    if valid_move == true
     move(board, index, "X")
     display_board(board)
+  else
+    puts "Please enter 1-9:"
   end
